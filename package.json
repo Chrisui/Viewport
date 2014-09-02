@@ -1,0 +1,25 @@
+{
+  "name": "Viewport",
+  "version": "0.0.0",
+  "description": "Provides a 2d viewport api for calculating plot/view coordinates and other common utilities (node or browser)",
+  "main": "./lib/viewport.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "2d",
+    "viewport",
+    "vector",
+    "maths"
+  ],
+  "author": "Chris Pearce <hello@chrispearce.me>",
+  "license": "MIT",
+  "dependencies": {
+    "victor": "~0.1.4"
+  },
+  "devDependencies": {
+    "mocha": "~1.21.4",
+    "chai": "~1.9.1",
+    "sinon": "~1.10.3"
+  }
+}
