@@ -9,9 +9,12 @@ Meant to be the spatial object manager layer under your renderer.
 - Viewport objects & collection management
 - Quad tree
 
+Install
+-------
+Coming soon to a package manager near you!
 
-Installation and Setup
-----------------------
+Develop/Debug
+-------------
 1. Ensure Node.js is installed
 2. Ensure required global npm packages are installed with commands ```npm install -g mocha```
 3. Run command ```npm install```
