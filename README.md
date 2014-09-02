@@ -1,6 +1,6 @@
 2d Viewport (thinking of hipster name)
 ======================================
-[![Build Status](https://secure.travis-ci.org/Chrisui/viewport.png?branch=master)](http://travis-ci.org/Chrisui/viewport)
+[![Build Status](https://travis-ci.org/Chrisui/Viewport.svg?branch=master)](https://travis-ci.org/Chrisui/Viewport)
 
 A 2d javascript viewport management library for use in node or the browser.
 Meant to be the spatial object manager layer under your renderer.
