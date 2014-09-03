@@ -8,8 +8,6 @@ var INITIAL_BOUNDS_POSITION = [0,0];
 var INITIAL_BOUNDS_SIZE = [500,200];
 var INITIAL_VIEW_POSITION = [0,0];
 var INITIAL_VIEW_SIZE = [1000,400];
-var MIN_RANGE = [0,0];
-var MAX_RANGE = [2000,800];
 
 describe('Viewport', function() {
 
@@ -28,7 +26,7 @@ describe('Viewport', function() {
 
     describe('constructor', function() {
 
-        it('should setup range as a bounds object correctly', function() {
+        it('should inherit from bounds', function() {
             expect(vp).to.be.instanceOf(Viewport.Bounds);
             // With correct accessors through viewport prototype
             expect(vp.x).to.equal(INITIAL_BOUNDS_POSITION[0]);
@@ -310,65 +308,6 @@ describe('Viewport', function() {
             expect(vp).to.have.property('y', -50);
             expect(vp).to.have.property('width', 1000);
             expect(vp).to.have.property('height', 400);
-        });
-
-    });
-
-    describe('.isInBounds()', function() {
-
-        it('should preach the truth', function() {
-            expect(vp.isInBounds(new Victor(100, 100))).to.be.true;
-            expect(vp.isInBounds(new Victor(9999999, 100))).to.be.false;
-            expect(vp.isInBounds(new Victor(9999999, 9999999999999))).to.be.false;
-        });
-
-    });
-
-    describe('.isInXBounds()', function() {
-
-        it('should preach the truth', function() {
-            expect(vp.isInXBounds(100)).to.be.true;
-            expect(vp.isInXBounds(99999999)).to.be.false;
-        });
-
-    });
-
-    describe('.isInYBounds()', function() {
-
-        it('should preach the truth', function() {
-            expect(vp.isInYBounds(100)).to.be.true;
-            expect(vp.isInYBounds(99999999)).to.be.false;
-        });
-
-    });
-
-    describe('.doBoundsIntersect()', function() {
-
-        it('should return true for box entirely in range', function() {
-            var bounds = new Bounds(
-                new Victor(50,50),
-                new Victor(50,50)
-            );
-            expect(vp.doBoundsIntersect(bounds)).to.be.true;
-            expect(vp.doBoundsIntersect(bounds, true)).to.be.true;
-        });
-
-        it('should return correct values for different checks on overlapping bounds', function() {
-            var bounds = new Bounds(
-                new Victor(-25,-25),
-                new Victor(50,50)
-            );
-            expect(vp.doBoundsIntersect(bounds)).to.be.true;
-            expect(vp.doBoundsIntersect(bounds, true)).to.be.false;
-        });
-
-        it('should return true for massive bounds greater than all range axis dimensions', function() {
-            var bounds = new Bounds(
-                new Victor(-25,-25),
-                new Victor(999999,9999999)
-            );
-            expect(vp.doBoundsIntersect(bounds)).to.be.true;
-            expect(vp.doBoundsIntersect(bounds, true)).to.be.false;
         });
 
     });
