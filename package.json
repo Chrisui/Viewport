@@ -15,7 +15,8 @@
   "author": "Chris Pearce <hello@chrispearce.me>",
   "license": "MIT",
   "dependencies": {
-    "victor": "~0.1.4"
+    "victor": "~0.1.4",
+    "constructr": "~0.2.0"
   },
   "devDependencies": {
     "mocha": "~1.21.4",
