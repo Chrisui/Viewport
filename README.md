@@ -5,9 +5,15 @@
 A 2d javascript viewport management library for use in node or the browser.
 Meant to be the spatial object manager layer under your renderer.
 
-#### Upcoming
-- Viewport objects & collection management
-- Quad tree
+###Features
+- Viewport (spatial management, panning, zooming etc.)
+- Quad tree index
+- Fully extensible (uses [Constructr](https://github.com/Chrisui/Constructr)
+- *Viewport item manager (group mutation, snapping etc.)
+- *Visual debugger
+- *Grid index
+
+* = Upcoming
 
 Install
 -------
