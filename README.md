@@ -9,11 +9,11 @@ Meant to be the spatial object manager layer under your renderer.
 - Viewport (spatial management, panning, zooming etc.)
 - Quad tree index
 - Fully extensible (uses [Constructr](https://github.com/Chrisui/Constructr)
-- *Viewport item manager (group mutation, snapping etc.)
-- *Visual debugger
-- *Grid index
+- Viewport item manager (group mutation, snapping etc.)*
+- Visual debugger*
+- Grid index*
 
-* = Upcoming
+Key: Upcoming*
 
 Install
 -------
