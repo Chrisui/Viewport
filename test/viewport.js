@@ -1,5 +1,5 @@
 var Viewport = require('../lib/viewport');
-var Bounds = Viewport.Bounds;
+var Bounds = require('../lib/bounds');
 var Victor = require('victor');
 var expect = require('chai').expect;
 
@@ -27,7 +27,7 @@ describe('Viewport', function() {
     describe('constructor', function() {
 
         it('should inherit from bounds', function() {
-            expect(vp).to.be.instanceOf(Viewport.Bounds);
+            expect(vp).to.be.instanceOf(Bounds);
             // With correct accessors through viewport prototype
             expect(vp.x).to.equal(INITIAL_BOUNDS_POSITION[0]);
             expect(vp.y).to.equal(INITIAL_BOUNDS_POSITION[1]);
