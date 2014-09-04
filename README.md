@@ -9,11 +9,11 @@ Meant to be the spatial object manager layer under your renderer.
 - Viewport (spatial management, panning, zooming etc.)
 - Quad tree index
 - Fully extensible (uses [Constructr](https://github.com/Chrisui/Constructr))
-- *Viewport item manager (group mutation, snapping etc.)
-- *Visual debugger
-- *Grid index
+- Viewport item manager (group mutation, snapping etc.)*
+- Visual debugger*
+- Grid index*
 
-* = Upcoming
+Key: Upcoming*
 
 Install
 -------
@@ -22,16 +22,10 @@ Coming soon to a package manager near you!
 Develop/Debug
 -------------
 1. Ensure Node.js is installed
-2. Ensure required global npm packages are installed with `npm install -g mocha`
-3. Run command `npm install`
+2. Ensure required global npm packages are installed with commands ```npm install -g mocha```
+3. Run command ```npm install```
 4. Boom!
-
-### Run visual suite?
-1. `npm install beefy watchify -g`
-2. `beefy visual/visual.js` (`--live` if you want watchify)
-4. [http://localhost:9966](http://localhost:9966)
-3. Boom!
 
 Tests
 -----
-Make sure you have mocha installed and run `npm test`
+Make sure you have mocha installed and `npm test`
