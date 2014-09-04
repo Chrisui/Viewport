@@ -21,6 +21,7 @@
   "devDependencies": {
     "mocha": "~1.21.4",
     "chai": "~1.9.1",
-    "sinon": "~1.10.3"
+    "sinon": "~1.10.3",
+    "jquery-browserify": "~1.8.1"
   }
 }
