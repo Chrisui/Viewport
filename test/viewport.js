@@ -108,8 +108,8 @@ describe('Viewport', function() {
             expect(ret).to.have.property('y', 100);
 
             // Now try with viewport offset
-            vp.viewBounds.pos.x = 50;
-            vp.viewBounds.pos.y = 50;
+            vp.viewSpace.pos.x = 50;
+            vp.viewSpace.pos.y = 50;
             ret = vp.plotToClientSpace(vec);
 
             expect(ret).to.have.property('x', 150);
@@ -164,8 +164,8 @@ describe('Viewport', function() {
             expect(ret).to.have.property('y', 50);
 
             // Now try with viewport offset
-            vp.viewBounds.pos.x = 50;
-            vp.viewBounds.pos.y = 50;
+            vp.viewSpace.pos.x = 50;
+            vp.viewSpace.pos.y = 50;
             ret = vp.viewToClientSpace(vec);
 
             expect(ret).to.have.property('x', 100);
@@ -196,8 +196,8 @@ describe('Viewport', function() {
             expect(ret).to.have.property('y', 50);
 
             // Now try with viewport offset
-            vp.viewBounds.pos.x = 50;
-            vp.viewBounds.pos.y = 50;
+            vp.viewSpace.pos.x = 50;
+            vp.viewSpace.pos.y = 50;
             ret = vp.clientToViewSpace(vec);
 
             expect(ret).to.have.property('x', 0);
@@ -228,8 +228,8 @@ describe('Viewport', function() {
             expect(ret).to.have.property('y', 25);
 
             // Now try with viewport offset
-            vp.viewBounds.pos.x = 50;
-            vp.viewBounds.pos.y = 50;
+            vp.viewSpace.pos.x = 50;
+            vp.viewSpace.pos.y = 50;
             ret = vp.clientToPlotSpace(vec);
 
             expect(ret).to.have.property('x', 0);
@@ -237,8 +237,8 @@ describe('Viewport', function() {
 
             // And again with new coord
             vec = new Victor(200, 200);
-            vp.viewBounds.pos.x = 50;
-            vp.viewBounds.pos.y = 50;
+            vp.viewSpace.pos.x = 50;
+            vp.viewSpace.pos.y = 50;
             ret = vp.clientToPlotSpace(vec);
 
             expect(ret).to.have.property('x', 75);
