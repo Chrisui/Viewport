@@ -1,0 +1,23 @@
+global.Dep = require('path/to/deps');
+
+var setup = function() {
+	// Setup every test
+};
+
+exports = module.exports = {
+	name: 'Suite Name',
+	tests: {
+		'Array': {
+			setup: setup,
+			fn: function() {
+				// Test variation 1
+			}
+		},
+		'FastArray': {
+			setup: setup,
+			fn: function() {
+				// Test variation 2
+			}
+		}
+	}
+};

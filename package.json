@@ -15,13 +15,15 @@
   "author": "Chris Pearce <hello@chrispearce.me>",
   "license": "MIT",
   "dependencies": {
-    "victor": "~0.1.4",
+    "victor": "~0.2.1",
     "constructr": "~0.3.0"
   },
   "devDependencies": {
-    "mocha": "~1.21.4",
     "chai": "~1.9.1",
-    "sinon": "~1.10.3",
-    "jquery-browserify": "~1.8.1"
+    "grunt": "^0.4.5",
+    "grunt-benchmark": "^0.3.0",
+    "jquery-browserify": "~1.8.1",
+    "mocha": "~1.21.4",
+    "sinon": "~1.10.3"
   }
 }
