@@ -2,7 +2,7 @@
   "name": "Viewport",
   "version": "0.0.0",
   "description": "Provides a 2d viewport api for calculating plot/view coordinates and other common utilities (node or browser)",
-  "main": "./lib/viewport.js",
+  "main": "./index.js",
   "scripts": {
     "test": "mocha"
   },

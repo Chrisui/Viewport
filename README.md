@@ -12,6 +12,7 @@ Meant to be the spatial object manager layer under your renderer.
 - Viewport item manager (group mutation, snapping etc.)*
 - Visual debugger*
 - Grid index*
+- Axis index*
 
 Key: Upcoming*
 

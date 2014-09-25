@@ -36,7 +36,7 @@ var vp = new Viewport(
     )
 );
 
-var vpm = new ViewportManager(vp);
+var vpm = window.vpm = new ViewportManager(vp);
 
 var container = createElement();
 document.body.style.overflow = 'hidden';
@@ -55,7 +55,7 @@ var loop = function() {
         vpm.addItem(newItem);
     }
 
-    setTimeout(loop, 1000);
+    setTimeout(loop, 500);
 };
 loop();
 
