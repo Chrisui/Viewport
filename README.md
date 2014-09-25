@@ -27,6 +27,14 @@ Develop/Debug
 3. Run command ```npm install```
 4. Boom!
 
-Tests
------
+Running Tests
+-------------
 Make sure you have mocha installed and `npm test`
+
+TODO
+----
+Below is a non-exhaustive list of features/modifications which are intended to be completed/explored
+- Item manager
+- Interactive visual debugger for developers to layer with their own renderers (in the browser)
+- Grid index to work alongside quad tree index
+- Snap helper (snap to objects/snap to grid/smart snapping)

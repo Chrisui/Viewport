@@ -6,6 +6,8 @@ var ViewportManager = require('../lib/viewportManager');
 var Debugger = require('../lib/browser/debugger');
 var $ = require('jquery-browserify');
 
+var $window = $(window);
+
 var createElement = function(customStyles) {
     var div = document.createElement('div');
     customStyles = customStyles || {};
@@ -32,34 +34,36 @@ var vp = new Viewport(
     new Victor(1920,1080),
     new Bounds(
         new Victor(0,0),
-        new Victor(1920,1080)
+        new Victor($window.width(),$window.height())
     )
 );
 
-var vpm = window.vpm = new ViewportManager(vp);
+var vpm = new ViewportManager(vp);
+vpm.zoom(1);
 
 var container = createElement();
 document.body.style.overflow = 'hidden';
 document.body.appendChild(container);
+
 var dbg = window.dbg = new Debugger(container, vpm);
+
+var NUM_ITEMS = 10000;
 
 var loop = function() {
     vpm.clearItems();
 
-    for (var i = 0; i < 100; ++i) {
-        var newItem = new Item(
-            (new Victor(0,0)).randomize(new Victor(0,0), new Victor(1920, 1080)),
-            new Victor(10,10)
-        );
+    for (var i = 0; i < NUM_ITEMS; ++i) {
+        var item = new Item(null, new Victor(10, 10));
 
-        vpm.addItem(newItem);
+	    item.pos.copy((new Victor).randomize(new Victor, new Victor(1920, 1080)));
+
+        vpm.addItem(item);
     }
 
-    setTimeout(loop, 500);
+    setTimeout(loop, 33);
 };
 loop();
 
-var $window = $(window);
 var mousePos = new Victor;
 
 $window.on('mousedown', function(e) {
